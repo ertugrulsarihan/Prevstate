@@ -33,6 +33,8 @@ function App() {
     setLastValue(dummyArray[dummyArray.length - 1]);
   }, [dummyArray]);
 
+  console.log(lastValue);
+
   return (
     <div className="container ">
       <input
@@ -57,7 +59,9 @@ function App() {
       <button className="btn btn-primary" onClick={increaseToDummy2}>
         Arttır
       </button>
-      <button onClick={deleteLast}>Delete</button>
+      <button className="btn btn-danger" onClick={deleteLast}>
+        Delete
+      </button>
     </div>
   );
 }
